@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SectionFooterCRV : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UIButton *showMoreButton;
 
 @end
