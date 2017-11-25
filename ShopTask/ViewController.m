@@ -50,12 +50,19 @@
     Cell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.clothesImage.image = [UIImage imageNamed:_images[indexPath.row % 2]];
+    cell.clothesImage.tag = indexPath.row % 2;
+    
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showImageInAllScreen:)];
+    [cell.clothesImage addGestureRecognizer:tapGesture];
+    
     cell.clothesNameLabel.text = @"Done";
     cell.clothesPriceLabel.text = @"$225";
     
     return cell;
 
 }
+
+
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
@@ -94,13 +101,23 @@
     
 }
 
-//-(void) showImageInAllScreen:(UITapGestureRecognizer *)gesture
-//{
-//    UIImageView * image = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
-//    image = (UIImageView *)gesture.view;
-//    [self.view addSubview:image];
-//}
+-(void) showImageInAllScreen:(UITapGestureRecognizer *)gesture
+{
+    UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
+    imageView.image = [UIImage imageNamed:_images[gesture.view.tag]];
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissFullScreenImage:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
+    imageView.userInteractionEnabled = YES;
+    [imageView addGestureRecognizer:swipeGesture];
+    [self.view addSubview:imageView];
+}
 
+
+-(void) dismissFullScreenImage:(UISwipeGestureRecognizer *)gesture
+{
+    [gesture.view removeFromSuperview];
+}
 
 @end
 
