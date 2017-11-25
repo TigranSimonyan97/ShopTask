@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SectionFooterCRV.h
 //  ShopTask
 //
 //  Created by Tiko on 11/25/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController  <UICollectionViewDataSource,UICollectionViewDelegate>
-
+@interface SectionFooterCRV : UICollectionReusableView
 
 @end
-
