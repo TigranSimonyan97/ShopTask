@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //TabBar customization
+    UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    
+    [tabBar setBarTintColor:[UIColor blackColor]];
+    [tabBar setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 

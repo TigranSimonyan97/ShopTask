@@ -62,8 +62,6 @@
 
 }
 
-
-
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionReusableView *reusableView = nil;
@@ -109,6 +107,7 @@
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(dismissFullScreenImage:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
     imageView.userInteractionEnabled = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
     [imageView addGestureRecognizer:swipeGesture];
     [self.view addSubview:imageView];
 }

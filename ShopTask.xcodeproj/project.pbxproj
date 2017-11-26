@@ -26,7 +26,7 @@
 		52D4CAA01FC95BB7003E70DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		52D4CAA11FC95BB7003E70DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		52D4CAA41FC95BB7003E70DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		52D4CAA61FC95BB7003E70DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52D4CAA61FC95BB7003E70DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ShopTask/Assets.xcassets; sourceTree = "<group>"; };
 		52D4CAA91FC95BB7003E70DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52D4CAAB1FC95BB7003E70DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D4CAB11FC96EC4003E70DF /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
@@ -48,10 +48,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526A74021FCB205E00B64059 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52D4CAA01FC95BB7003E70DF /* ViewController.h */,
+				52D4CAA11FC95BB7003E70DF /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		526A74031FCB207200B64059 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52D4CAB11FC96EC4003E70DF /* Cell.h */,
+				52D4CAB21FC96EC4003E70DF /* Cell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		52D4CA8E1FC95BB6003E70DF = {
 			isa = PBXGroup;
 			children = (
 				52D4CA991FC95BB6003E70DF /* ShopTask */,
+				52D4CAA61FC95BB7003E70DF /* Assets.xcassets */,
 				52D4CA981FC95BB6003E70DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,12 +86,9 @@
 		52D4CA991FC95BB6003E70DF /* ShopTask */ = {
 			isa = PBXGroup;
 			children = (
-				52D4CAA01FC95BB7003E70DF /* ViewController.h */,
-				52D4CAA11FC95BB7003E70DF /* ViewController.m */,
+				526A74021FCB205E00B64059 /* Controllers */,
 				52D4CAA31FC95BB7003E70DF /* Main.storyboard */,
-				52D4CAB11FC96EC4003E70DF /* Cell.h */,
-				52D4CAB21FC96EC4003E70DF /* Cell.m */,
-				52D4CAA61FC95BB7003E70DF /* Assets.xcassets */,
+				526A74031FCB207200B64059 /* Cell */,
 				52D4CABA1FC9AC07003E70DF /* CollectionReusableViews */,
 				52D4CA9A1FC95BB7003E70DF /* Supporting Files */,
 			);
@@ -338,6 +354,7 @@
 				52D4CAB01FC95BB7003E70DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
