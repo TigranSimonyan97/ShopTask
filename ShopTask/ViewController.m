@@ -84,6 +84,15 @@
     return reusableView;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
+    
+    return CGSizeMake(collectionView.frame.size.width / 2 - 2 * flowLayout.minimumInteritemSpacing, flowLayout.itemSize.height);
+}
+
 - (IBAction)showMoreButtonTouchUP:(UIButton *)sender
 {
     NSInteger sectionIndex = sender.tag;
