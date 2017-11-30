@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52416A151FD08FF70007ABC7 /* ClothesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52416A141FD08FF70007ABC7 /* ClothesModel.m */; };
+		52416A181FD090630007ABC7 /* Clothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 52416A171FD090630007ABC7 /* Clothes.m */; };
 		52D4CA9C1FC95BB7003E70DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D4CA9B1FC95BB7003E70DF /* main.m */; };
 		52D4CA9F1FC95BB7003E70DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D4CA9E1FC95BB7003E70DF /* AppDelegate.m */; };
 		52D4CAA21FC95BB7003E70DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D4CAA11FC95BB7003E70DF /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52416A131FD08FF70007ABC7 /* ClothesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothesModel.h; sourceTree = "<group>"; };
+		52416A141FD08FF70007ABC7 /* ClothesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClothesModel.m; sourceTree = "<group>"; };
+		52416A161FD090630007ABC7 /* Clothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clothes.h; sourceTree = "<group>"; };
+		52416A171FD090630007ABC7 /* Clothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clothes.m; sourceTree = "<group>"; };
 		52D4CA971FC95BB6003E70DF /* ShopTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D4CA9B1FC95BB7003E70DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52D4CA9D1FC95BB7003E70DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +54,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52416A1C1FD0950A0007ABC7 /* Clothes */ = {
+			isa = PBXGroup;
+			children = (
+				52416A131FD08FF70007ABC7 /* ClothesModel.h */,
+				52416A141FD08FF70007ABC7 /* ClothesModel.m */,
+				52416A161FD090630007ABC7 /* Clothes.h */,
+				52416A171FD090630007ABC7 /* Clothes.m */,
+			);
+			name = Clothes;
+			sourceTree = "<group>";
+		};
 		526A74021FCB205E00B64059 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +103,7 @@
 		52D4CA991FC95BB6003E70DF /* ShopTask */ = {
 			isa = PBXGroup;
 			children = (
+				52416A1C1FD0950A0007ABC7 /* Clothes */,
 				526A74021FCB205E00B64059 /* Controllers */,
 				52D4CAA31FC95BB7003E70DF /* Main.storyboard */,
 				526A74031FCB207200B64059 /* Cell */,
@@ -190,11 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52416A151FD08FF70007ABC7 /* ClothesModel.m in Sources */,
 				52D4CAA21FC95BB7003E70DF /* ViewController.m in Sources */,
 				52D4CAB31FC96EC4003E70DF /* Cell.m in Sources */,
 				52D4CAB91FC9ABE3003E70DF /* SectionFooterCRV.m in Sources */,
 				52D4CA9F1FC95BB7003E70DF /* AppDelegate.m in Sources */,
 				52D4CAB61FC9A57F003E70DF /* SectionHeaderCRV.m in Sources */,
+				52416A181FD090630007ABC7 /* Clothes.m in Sources */,
 				52D4CA9C1FC95BB7003E70DF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
